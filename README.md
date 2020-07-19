@@ -6,7 +6,7 @@ a highly scaleable simple registeration service
 ### How to deploy 
 
 ```sh 
-kukubectl apply -k infrastructure 
+kubectl apply -k infrastructure 
 ```
 
 ### Final goal
