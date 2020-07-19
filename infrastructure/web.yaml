@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registration-web
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: registration-web
+  template:
+    metadata:
+      labels:
+        app: registration-web
+    spec:
+      containers:
+        - name: registration-web
+          image: siamandm/registration-web
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+spec:
+  type: ClusterIP
+  selector:
+    app: registration-web
+  ports:
+    - port: 8080
+      targetPort: 80
