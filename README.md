@@ -3,6 +3,8 @@
 a highly scaleable simple registeration service 
 
 
+[Kanban Board](issue-tracker/board.md)
+
 ### How to deploy 
 
 ```sh 
